@@ -1,0 +1,89 @@
+
+{
+  "queues": [
+    {
+      "queueTag": "q1",
+      "servers": 1,
+      "capacity": 999,
+      "minArrival": 1,
+      "maxArrival": 4,
+      "minService": 1,
+      "maxService": 1.5
+    },
+    {
+      "queueTag": "q2",
+      "servers": 3,
+      "capacity": 5,
+      "minArrival": 0,
+      "maxArrival": 0,
+      "minService": 5,
+      "maxService": 10
+    },
+    {
+      "queueTag": "q3",
+      "servers": 2,
+      "capacity": 8,
+      "minArrival": 0,
+      "maxArrival": 0,
+      "minService": 10,
+      "maxService": 20
+    }
+  ],
+  "network": [
+    {
+      "sourceTag": "q1",
+      "targetTag": "q2",
+      "minRangeProbability": "0.2",
+      "maxRangeProbability": "1.0"
+    },
+    {
+      "sourceTag": "q1",
+      "targetTag": "q3",
+      "minRangeProbability": "0.0",
+      "maxRangeProbability": "0.2"
+    },
+    {
+      "sourceTag": "q2",
+      "targetTag": "q1",
+      "minRangeProbability": "0.0",
+      "maxRangeProbability": "0.3"
+    },
+    {
+      "sourceTag": "q2",
+      "targetTag": "q3",
+      "minRangeProbability": "0.3",
+      "maxRangeProbability": "0.8"
+    },
+    {
+      "sourceTag": "q3",
+      "targetTag": "q2",
+      "minRangeProbability": "0.0",
+      "maxRangeProbability": "0.7"
+    }
+  ],
+  "random": {
+    "useRandom": true,
+    "randomValues": [
+      0.2176,
+      0.0103,
+      0.1109,
+      0.3456,
+      0.991,
+      0.2323,
+      0.9211,
+      0.0322,
+      0.1211,
+      0.5131,
+      0.7208,
+      0.9172,
+      0.9922,
+      0.8324,
+      0.5011,
+      0.2931
+    ]
+  },
+  "firstArrival": {
+    "queueName": "q1",
+    "initialTime": 1
+  }
+}
